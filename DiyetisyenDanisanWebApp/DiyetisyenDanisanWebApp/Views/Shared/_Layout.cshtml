@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnDiet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DiyetisyenDanisanWebApp.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #d4edda; /* Light green background */
+        }
+
+        .navbar-brand-custom {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: green !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+            .navbar-light .navbar-nav .nav-link:hover {
+                color: green;
+            }
+
+        .navbar-light .navbar-nav .nav-item.active .nav-link {
+            color: green !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            margin-right: 20px;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .username {
+            color: #006400 !important; /* Dark green color */
+            font-family: 'Lobster', cursive; /* Matching font */
+            font-size: 1.5rem; /* Larger font size */
+            margin-right: 15px; /* Margin to separate from logout button */
+        }
+
+        .logout-btn {
+            color: #fff !important;
+            background-color: #ffb6c1; /* Light pink background */
+            font-family: 'Lobster', cursive; /* Different font */
+            font-size: 1.2rem; /* Larger font size */
+            border: none;
+            border-radius: 5px;
+            padding: 8px 20px; /* Bigger padding */
+            transition: background-color 0.3s ease;
+        }
+
+            .logout-btn:hover {
+                background-color: #ffc8d4; /* Lighter pink on hover */
+            }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            text-align: center; /* Center text */
+            font-family: 'Roboto', sans-serif;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navbar-custom border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @if (Html.ViewContext.HttpContext.User.Identity.IsAuthenticated)
+                {
+                    if (Html.ViewContext.HttpContext.User.IsInRole("Diyetisyen"))
+                    {
+                        <a class="navbar-brand navbar-brand-custom" href="/Diyetisyen">OnDiet</a>
+                    }
+                    else if (Html.ViewContext.HttpContext.User.IsInRole("Danisman"))
+                    {
+                        <a class="navbar-brand navbar-brand-custom" href="/Danisman">OnDiet</a>
+                    }
+                }
+                else
+                {
+                    <a class="navbar-brand navbar-brand-custom" href="/">OnDiet</a>
+                }
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        @if (Html.ViewContext.HttpContext.User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link username">@Html.ViewContext.HttpContext.User.Identity.Name</a>
+                            </li>
+                            @if (Html.ViewContext.HttpContext.User.IsInRole("Diyetisyen"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link logout-btn" href="/Diyetisyen/Logout">Çıkış Yap</a>
+                                </li>
+                            }
+                            else if (Html.ViewContext.HttpContext.User.IsInRole("Danisman"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link logout-btn" href="/Danisman/Logout">Çıkış Yap</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer border-top text-muted">
+        <div class="container">
+            &copy; 2024 - OnDiet
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

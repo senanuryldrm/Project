@@ -1,0 +1,253 @@
+﻿@{
+    ViewData["Title"] = "Danışman Listesi";
+    var mesajlar = (ViewBag.mesajlar ?? new List<MesajView>()) as List<MesajView>;
+}
+
+<style>
+    body {
+        background-image: url('https://t3.ftcdn.net/jpg/05/21/70/06/360_F_521700613_yFdnnY89krAeLyVya11VrYXPHcbR6r6u.jpg');
+        
+        font-family: Arial, sans-serif; /* Font type */
+    }
+
+    .container {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        background-color: #ffffff; /* White */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .card-header {
+        background-color: #e8f4e5; /* Light green */
+        border-radius: 10px 10px 0 0;
+    }
+
+    .btn {
+        margin-right: 10px;
+        font-family: Arial, sans-serif; /* Font type */
+        font-weight: bold;
+    }
+
+    .modal-content {
+        background-color: #ffffff; /* White */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        background-color: #e8f4e5; /* Light green */
+        border-radius: 10px 10px 0 0;
+    }
+
+    .modal-body {
+        background-color: #f7f7f7; /* Light gray */
+        border-radius: 0 0 10px 10px;
+    }
+
+    .modal-footer {
+        background-color: #ffffff; /* White */
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+    }
+
+    h1#consultants-heading {
+        background-color: #f0f8ff; /* Alice blue */
+        padding: 10px;
+        border-radius: 5px; /* Smaller border radius */
+        border: 2px solid #228B22; /* Green border */
+        font-family: 'Arial', sans-serif; /* Change the font type */
+        text-align: center;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #e8f4e5; /* Light green */
+        padding: 10px 0;
+        text-align: center;
+        height: 50px; /* Adjust the height as needed */
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #a3c18f; /* Dark green */
+        border-radius: 10px;
+        font-family: Arial, sans-serif; /* Font type */
+        font-size: 14px;
+        color: #204529; /* Dark green */
+    }
+</style>
+<div class="container">
+    <h1 id="consultants-heading">Danışmanlarım</h1>
+    <br />
+
+    @foreach (var danisman in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="card-title mb-0">@danisman.AdSoyad</h5>
+                    <small class="text-muted">Email: @danisman.Mail</small><br>
+                    <small class="text-muted">Telefon: @danisman.Telefon</small>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#dietPlanModal" data-danisman="@danisman.AdSoyad için diyet listesi ekle" data-diyet="@danisman.DiyetProgrami" data-id="@danisman.Id">Diyet Listesi Ekle</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#messageModal" data-danisman="@danisman.AdSoyad kişisine mesaj gönder" data-id="@danisman.Id">Mesaj Gönder (@mesajlar.Count(m => m.GonderenId == danisman.Id && !m.Okundu))</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="modal fade" id="dietPlanModal" tabindex="-1" aria-labelledby="dietPlanModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dietPlanModalLabel" style="color: #228B22;">Diyet Listesi Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/Diyetisyen/DiyetPlani">
+                    <input type="hidden" name="DanismanId" value="">
+                    <div class="form-group">
+                        <textarea class="form-control" name="DiyetPlani" rows="15" placeholder="Diyet listesini buraya giriniz" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel" style="color: #228B22;"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="message-history" style="height: 300px; overflow-y: scroll;"></div>
+                <form method="post" action="/Diyetisyen/MesajGonder">
+                    <input type="hidden" name="AliciId">
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <textarea class="form-control" name="Mesaj" rows="5" placeholder="Mesajınızı buraya giriniz" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $('#dietPlanModal, #messageModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var danisman = button.data('danisman');
+        var danismanId = button.data('id');
+        var diyetProgrami = button.data('diyet');
+        var modal = $(this);
+
+        document.getElementsByName("DanismanId")[0].value = danismanId;
+        document.getElementsByName("AliciId")[0].value = danismanId;
+        document.getElementsByName("DiyetPlani")[0].value = diyetProgrami;
+        modal.find('.modal-title').text(danisman);
+
+        if (modal.attr('id') === 'messageModal') {
+            var messageHistory = modal.find('.message-history');
+            messageHistory.empty();
+            var allMessages = @Html.Raw(Json.Serialize(ViewBag.mesajlar));
+            var danismanMessages = allMessages.filter(function (message) {
+                return message.aliciId === danismanId || message.gonderenId === danismanId;
+            });
+            danismanMessages.forEach(function (message) {
+                var messageClass = message.gonderenAdi === "Ben" ? "me" : "other";
+                var messageHtml = '<div class="message ' + messageClass + '">' +
+                    '<strong>' + message.gonderenAdi + ':</strong>' +
+                    '<div class="message-text ' + messageClass + '">' +
+                    message.mesaj +
+                    '</div>' +
+                    '</div>';
+                messageHistory.append(messageHtml);
+            });
+            messageHistory.scrollTop(messageHistory[0].scrollHeight);
+            var gonderenId = danismanMessages.length > 0 ? danismanMessages[0].gonderenId : 1;
+            var aliciId = danismanMessages.length > 0 ? danismanMessages[0].aliciId : 1;
+            $.ajax({
+                url: '/Diyetisyen/MesajOkundu',
+                type: 'POST',
+                data: { gonderenId: gonderenId, aliciId: aliciId },
+                success: function () {
+                    $("a[data-id='" + danismanId + "'][data-target='#messageModal']").html('Mesaj Gönder (0)')
+                },
+                error: function () {
+                }
+            });
+        }
+    });
+</script>
+<style>
+    .message-history {
+        height: 300px;
+        overflow-y: scroll;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .message {
+        margin-bottom: 15px;
+    }
+
+        .message strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .message.me {
+            text-align: right;
+        }
+
+            .message.me .message-text {
+                display: inline-block;
+                background-color: #dcedc8; /* Light green */
+                color: #1b5e20; /* Dark green */
+                padding: 10px;
+                border-radius: 10px;
+                max-width: 60%;
+            }
+
+        .message.other .message-text {
+            display: inline-block;
+            background-color: #ffe0b2; /* Light orange */
+            color: #e65100; /* Dark orange */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+</style>
+<script>
+    $('#messageModal').on('shown.bs.modal', function () {
+        var messageHistory = document.querySelector('.message-history');
+        messageHistory.scrollTop = messageHistory.scrollHeight;
+    });
+</script>

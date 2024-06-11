@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Karşılama Sayfası</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background: linear-gradient(to right, #a8e063, #56ab2f); /* Various tones of green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .btn-custom {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .btn-custom:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+        .btn-danisman {
+            background-color: #81c784; /* Light green */
+            color: #fff;
+        }
+
+            .btn-danisman:hover {
+                background-color: #66bb6a; /* Slightly darker green */
+            }
+
+        .btn-diyetisyen {
+            background-color: #4caf50; /* Medium green */
+            color: #fff;
+        }
+
+            .btn-diyetisyen:hover {
+                background-color: #388e3c; /* Dark green */
+            }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #388e3c; /* Dark green */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4caf50; /* Medium green */
+        }
+
+        .description {
+            font-size: 16px;
+            color: #2e7d32; /* Darker green */
+            margin-bottom: 40px;
+        }
+
+        .feature-bubbles {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .bubble {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #388e3c;
+            text-align: center;
+            position: relative;
+        }
+
+        .bubble-carrot {
+            background-color: #f1f8e9;
+            border: 2px solid #c5e1a5;
+            border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+        }
+
+            .bubble-carrot::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                width: 40px;
+                height: 40px;
+                background-color: #81c784;
+                border-radius: 50% 50% 50% 50%;
+            }
+
+        .bubble-broccoli {
+            background-color: #f1f8e9;
+            border: 2px solid #c5e1a5;
+            border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;
+        }
+
+            .bubble-broccoli::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                width: 60px;
+                height: 60px;
+                background-color: #81c784;
+                border-radius: 50% 50% 50% 50%;
+            }
+
+        .bubble p {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoş Geldiniz</h1>
+        <p class="description">OnDiet, sağlıklı beslenme ve yaşam tarzı için kişisel rehberinizdir. Diyetisyenler ve danışmanlar ile kolayca iletişime geçebilir, beslenme planınızı takip edebilir ve hedeflerinize ulaşabilirsiniz.</p>
+        <div class="feature-bubbles">
+            <div class="bubble bubble-carrot">
+                <p>Diyetisyeninizle veya danışanlarınızla kolayca mesajlaşın</p>
+            </div>
+            <div class="bubble bubble-broccoli">
+                <p>Kişiselleştirilmiş diyet planlarınızı takip edin</p>
+            </div>
+        </div>
+        <p>Lütfen girmek istediğiniz bölümü seçin:</p>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/Danisman/Giris" class="btn btn-custom btn-danisman">Danışman</a>
+            </div>
+            <div class="col-md-6">
+                <a href="/Diyetisyen/Giris" class="btn btn-custom btn-diyetisyen">Diyetisyen</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

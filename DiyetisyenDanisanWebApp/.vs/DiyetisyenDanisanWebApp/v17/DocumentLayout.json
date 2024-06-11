@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\controllers\\danismancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\controllers\\danismancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\danisman\\kayit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\danisman\\kayit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\diyetisyen\\kayit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\diyetisyen\\kayit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\controllers\\diyetisyencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\controllers\\diyetisyencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\danisman\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\danisman\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\diyetisyen\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\diyetisyen\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\danisman\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\danisman\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|c:\\users\\senan\\desktop\\project\\diyetisyendanisanwebapp\\diyetisyendanisanwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1485BD75-A789-45F4-A720-C2E699714D39}|DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp.csproj|solutionrelative:diyetisyendanisanwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T12:57:44.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T12:57:43.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DanismanController.cs",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Controllers\\DanismanController.cs",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Controllers\\DanismanController.cs",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Controllers\\DanismanController.cs",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Controllers\\DanismanController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T12:38:09.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Kayit.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Kayit.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Kayit.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Kayit.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Kayit.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAkwGMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T10:08:01.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Giris.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Giris.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Giris.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Giris.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Giris.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T10:05:10.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Giris.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Giris.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Giris.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Giris.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Giris.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAG0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T19:23:24.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Index.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Index.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Danisman\\Index.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Danisman\\Index.cshtml",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAkwNcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T19:23:13.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T18:55:05.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAmwIoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T10:30:02.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Services\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Services\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Services\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Services\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T08:38:39.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Kayit.cshtml",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Kayit.cshtml",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Kayit.cshtml",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Kayit.cshtml",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Views\\Diyetisyen\\Kayit.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAG0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T10:10:00.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DiyetisyenController.cs",
+              "DocumentMoniker": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Controllers\\DiyetisyenController.cs",
+              "RelativeDocumentMoniker": "DiyetisyenDanisanWebApp\\Controllers\\DiyetisyenController.cs",
+              "ToolTip": "C:\\Users\\senan\\Desktop\\Project\\DiyetisyenDanisanWebApp\\DiyetisyenDanisanWebApp\\Controllers\\DiyetisyenController.cs",
+              "RelativeToolTip": "DiyetisyenDanisanWebApp\\Controllers\\DiyetisyenController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAUwFwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:24:35.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

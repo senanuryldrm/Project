@@ -1,0 +1,217 @@
+﻿@{
+    var mesajlar = (ViewBag.mesajlar ?? new List<MesajView>()) as List<MesajView>;
+}
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .diet-text {
+        white-space: pre-wrap;
+    }
+</style>
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0">Programınız</h5>              
+            <div>
+                <a href="#" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#messageModal" data-danisman="Danışman Adı Soyadı">Diyetisyene Mesaj Gönder (@mesajlar.Count(m => !m.Okundu && m.GonderenId == Model.DiyetisyenKodu))</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="diet-text">@Html.Raw(Model.DiyetProgrami)</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="message-history" style="height: 300px; overflow-y: scroll;">
+                    @foreach (var message in mesajlar)
+                    {
+                        <div class="message @(message.GonderenId!=Model.DiyetisyenKodu ? "me" : "other")">
+                            <strong>@message.GonderenAdi:</strong>
+                            <div class="message-text @(message.GonderenId!=Model.DiyetisyenKodu ? "me" : "other")">
+                                @message.Mesaj
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <form method="post" action="/Danisman/MesajGonder">
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <input type="hidden" name="AliciId" value="@Model.DiyetisyenKodu">
+                        <textarea class="form-control" name="Mesaj" rows="5" placeholder="Mesajınızı buraya giriniz" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $('#messageModal').on('shown.bs.modal', function () {
+        var messageHistory = document.querySelector('.message-history');
+        messageHistory.scrollTop = messageHistory.scrollHeight;
+
+        var gonderenId = @Model.DiyetisyenKodu;
+        var aliciId = @Model.Id;
+        $.ajax({
+            url: '/Diyetisyen/MesajOkundu',
+            type: 'POST',
+            data: { gonderenId: gonderenId, aliciId: aliciId },
+            success: function () {
+                $("a[data-target='#messageModal']").html('Diyetisyene Mesaj Gönder (0)')
+            },
+            error: function () {
+            }
+        });
+    });
+</script>
+<style>
+    body {
+        background-color: #e8f5e9; /* Soft green */
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* White */
+    }
+
+    .card-header {
+        background-color: #ffcc80; /* Light orange */
+        border-bottom: 1px solid #ffa726; /* Medium orange */
+        color: #e65100; /* Dark orange */
+        font-weight: bold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .btn-outline-secondary {
+        border-color: #66bb6a; /* Medium green */
+        color: #66bb6a; /* Medium green */
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #66bb6a; /* Medium green */
+            color: #fff;
+        }
+
+    .diet-text {
+        white-space: pre-wrap;
+        color: #1b5e20; /* Dark green */
+        font-family: 'Georgia', serif; /* Different font for diet list */
+        font-size: 1.1em;
+    }
+
+    .modal-content {
+        border-radius: 15px;
+    }
+
+    .modal-header {
+        background-color: #aed581; /* Medium green */
+        border-bottom: none;
+        color: #1b5e20; /* Dark green */
+        font-weight: bold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .modal-body {
+        background-color: #fff3e0; /* Light orange background */
+    }
+
+    .form-group label {
+        color: #1b5e20; /* Dark green */
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 20px;
+        border: 1px solid #66bb6a; /* Medium green */
+    }
+
+    .btn-secondary {
+        background-color: #e65100; /* Dark orange */
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-secondary:hover {
+            background-color: #ff7043; /* Medium orange */
+        }
+
+    .message-history {
+        height: 300px;
+        overflow-y: scroll;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .message {
+        margin-bottom: 15px;
+    }
+
+        .message strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .message.me {
+            text-align: right;
+        }
+
+            .message.me .message-text {
+                display: inline-block;
+                background-color: #dcedc8; /* Light green */
+                color: #1b5e20; /* Dark green */
+                padding: 10px;
+                border-radius: 10px;
+                max-width: 60%;
+            }
+
+        .message.other .message-text {
+            display: inline-block;
+            background-color: #ffe0b2; /* Light orange */
+            color: #e65100; /* Dark orange */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+</style>
